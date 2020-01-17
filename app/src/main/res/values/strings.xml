@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Resistor Calculation</string>
+    <string name="text1">Расчёт резистора для светодиода</string>
+    <string name="Pos">Последовательное соединение</string>
+    <string name="one">Один светодиод</string>
+    <string name="par">Параллельное соединение</string>
+    <string name="text2">Исходные данные:</string>
+    <string name="nap">Напряжение питания:</string>
+    <string name="v1">В</string>
+    <string name="naps">Прямое напряжение светодиода:</string>
+    <string name="v2">В</string>
+    <string name="tok">Ток через светодиод:</string>
+    <string name="mA">мА</string>
+    <string name="btntext1">Рассчитать</string>
+    <string name="kl">Шт.</string>
+    <string name="kls">Кол-во светодиодов:</string>
+    <string name="history">History</string>
+</resources>

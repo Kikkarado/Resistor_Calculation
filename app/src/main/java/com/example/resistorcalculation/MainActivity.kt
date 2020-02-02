@@ -25,18 +25,24 @@ class MainActivity : AppCompatActivity() {
         rGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.OneSv -> {
-                    LN8.visibility = View.GONE
+                    textView9.visibility = View.GONE
+                    KolSv.visibility = View.GONE
+                    textView10.visibility = View.GONE
                     imageView.setImageResource(R.drawable.shema1)
                     KolSv.setText("1")
                 }
 
-                R.id.PosSoed -> {
-                    LN8.visibility = View.VISIBLE
+                R.id.ParSoed -> {
+                    textView9.visibility = View.VISIBLE
+                    KolSv.visibility = View.VISIBLE
+                    textView10.visibility = View.VISIBLE
                     imageView.setImageResource(R.drawable.shema3)
                 }
 
-                R.id.ParSoed -> {
-                    LN8.visibility = View.GONE
+                R.id.PosSoed -> {
+                    textView9.visibility = View.GONE
+                    KolSv.visibility = View.GONE
+                    textView10.visibility = View.GONE
                     imageView.setImageResource(R.drawable.shema2)
                     KolSv.setText("1")
                 }

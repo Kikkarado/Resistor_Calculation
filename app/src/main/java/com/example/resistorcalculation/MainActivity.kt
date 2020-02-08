@@ -1,11 +1,13 @@
 package com.example.resistorcalculation
 
+import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.history)
-            Toast.makeText(this, "History", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, DBActivity::class.java))
 
         return true
     }
@@ -86,6 +88,7 @@ class MainActivity : AppCompatActivity() {
     private fun clickButton() {
         val (r, p) = calculate()
         showDialog(r,p)
+        addData(r, p)
     }
 
     private fun showDialog(r: Double, p: Double) {
@@ -98,6 +101,41 @@ class MainActivity : AppCompatActivity() {
                 dialog.cancel()
             }.create()
             .show()
+    }
+
+    private fun addData(r: Double, p: Double){
+        val database = DBHelper(this).writableDatabase
+        val contentValues = ContentValues()
+        val cursor = database.query(TABLE_DATA, null, null, null, null, null, null)
+
+        contentValues.put(VOLTAGE, Nap.text.toString())
+        contentValues.put(F_VOLTAGE, NapSv.text.toString())
+        contentValues.put(CURRENT, Tok.text.toString())
+        contentValues.put(N_O_LEDS, KolSv.text.toString())
+        contentValues.put(RESISTENCE, r)
+        contentValues.put(MIN_POWER, p)
+
+        database.insert(TABLE_DATA, null, contentValues)
+
+        if (cursor.moveToFirst()){
+            val idIndex = cursor.getColumnIndex(KEY_ID)
+            val idName = cursor.getColumnIndex(VOLTAGE)
+            val idSurname = cursor.getColumnIndex(F_VOLTAGE)
+            val idDate = cursor.getColumnIndex(CURRENT)
+            val idGender = cursor.getColumnIndex(N_O_LEDS)
+            val idHeight = cursor.getColumnIndex(RESISTENCE)
+            val idWeight = cursor.getColumnIndex(MIN_POWER)
+
+            do {
+                Log.d("mLog", "ID = " + cursor.getInt(idIndex) + "; name = " + cursor.getString(idName)
+                        + "; surname = " + cursor.getString(idSurname) +
+                        "; date = " + cursor.getString(idDate) + "; gender = " + cursor.getString(idGender)
+                        + "; height = " + cursor.getString(idHeight) + "; weight = " + cursor.getString(idWeight))
+            } while (cursor.moveToNext())
+        }else Log.d("mLog", "0 rows")
+        cursor.close()
+
+        DBHelper(this).close()
     }
 }
 

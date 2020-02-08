@@ -127,10 +127,10 @@ class MainActivity : AppCompatActivity() {
             val idWeight = cursor.getColumnIndex(MIN_POWER)
 
             do {
-                Log.d("mLog", "ID = " + cursor.getInt(idIndex) + "; name = " + cursor.getString(idName)
-                        + "; surname = " + cursor.getString(idSurname) +
-                        "; date = " + cursor.getString(idDate) + "; gender = " + cursor.getString(idGender)
-                        + "; height = " + cursor.getString(idHeight) + "; weight = " + cursor.getString(idWeight))
+                Log.d("mLog", "ID = " + cursor.getInt(idIndex) + "; voltage = " + cursor.getString(idName)
+                        + "; forward_voltage = " + cursor.getString(idSurname) +
+                        "; current = " + cursor.getString(idDate) + "; number_of_LEDs = " + cursor.getString(idGender)
+                        + "; resistance = " + cursor.getString(idHeight) + "; min_power = " + cursor.getString(idWeight))
             } while (cursor.moveToNext())
         }else Log.d("mLog", "0 rows")
         cursor.close()

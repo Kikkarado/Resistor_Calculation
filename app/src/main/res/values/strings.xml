@@ -7,12 +7,23 @@
     <string name="text2">Исходные данные:</string>
     <string name="nap">Напряжение питания:</string>
     <string name="v1">В</string>
-    <string name="naps">Прямое напряжение светодиода:</string>
-    <string name="v2">В</string>
+    <string name="naps">Напряжение светодиода:</string>
     <string name="tok">Ток через светодиод:</string>
     <string name="mA">мА</string>
     <string name="btntext1">Рассчитать</string>
     <string name="kl">Шт.</string>
     <string name="kls">Кол-во светодиодов:</string>
     <string name="history">History</string>
+    <string name="resistence">Сопротивление:</string>
+    <string name="min_power">Мин. мощность:</string>
+    <string name="your_data"><u>Ваши данные №</u></string>
+    <string name="answer"><u>Результат расчётов:</u></string>
+    <string name="watts">Вт</string>
+    <string name="om">оМ</string>
+    <string name="current_led">Ток светодиода:</string>
+    <string name="led">Светодиод:</string>
+    <string name="voltage">Напряжение:</string>
+    <string name="back">Назад</string>
+    <string name="delete">Удалить</string>
+    <string name="leds">Светодиодов:</string>
 </resources>

@@ -112,20 +112,22 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:paddingTop="12dp"
             android:text="@string/nap"
             android:textAlignment="center"
             android:textColor="@color/primaryTextColor"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
         <EditText
             android:id="@+id/Nap"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="136dp"
+            android:layout_marginEnd="36dp"
             android:ems="10"
             android:gravity="right"
             android:inputType="numberDecimal"
@@ -133,9 +135,7 @@
             android:text="220"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toTopOf="@+id/textView3" />
-
 
         <TextView
             android:id="@+id/textView6"
@@ -153,11 +153,12 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             android:text="@string/naps"
             android:textColor="@color/primaryTextColor"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -165,14 +166,13 @@
             android:id="@+id/NapSv"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
             android:ems="10"
             android:gravity="right"
             android:inputType="numberDecimal"
             android:selectAllOnFocus="true"
             android:text="3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.726"
-            app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/Nap" />
 
         <TextView
@@ -180,7 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/v2"
+            android:text="@string/v1"
             android:textColor="@color/primaryTextColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.384"
@@ -191,29 +191,29 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             android:text="@string/tok"
             android:textColor="@color/primaryTextColor"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.037"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
 
         <EditText
             android:id="@+id/Tok"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
             android:ems="10"
             android:gravity="end"
             android:inputType="numberDecimal"
             android:selectAllOnFocus="true"
             android:text="15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.83"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/NapSv"
             tools:ignore="RtlHardcoded" />
-
 
         <TextView
             android:id="@+id/textView8"
@@ -232,11 +232,14 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             android:text="@string/kls"
             android:textColor="@color/primaryTextColor"
+            android:visibility="gone"
+            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.037"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -244,13 +247,15 @@
             android:id="@+id/KolSv"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="36dp"
             android:ems="10"
             android:gravity="right"
             android:inputType="numberSigned"
             android:text="1"
+            android:selectAllOnFocus="true"
+            android:visibility="gone"
+            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.903"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Tok" />
 
 
@@ -261,6 +266,8 @@
             android:layout_marginTop="28dp"
             android:text="@string/kl"
             android:textColor="@color/primaryTextColor"
+            android:visibility="gone"
+            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.987"
             app:layout_constraintStart_toStartOf="parent"

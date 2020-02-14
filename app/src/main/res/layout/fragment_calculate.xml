@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/MainLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -73,21 +75,24 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:clickable="true"
-                android:text="@string/one" />
+                android:text="@string/one"
+                android:focusable="true" />
 
             <RadioButton
                 android:id="@+id/ParSoed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="@string/par" />
+                android:text="@string/par"
+                android:focusable="true" />
 
             <RadioButton
                 android:id="@+id/PosSoed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="@string/Pos" />
+                android:text="@string/Pos"
+                android:focusable="true" />
         </RadioGroup>
 
 
@@ -236,11 +241,11 @@
             android:text="@string/kls"
             android:textColor="@color/primaryTextColor"
             android:visibility="gone"
-            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:visibility="visible" />
 
         <EditText
             android:id="@+id/KolSv"
@@ -250,12 +255,12 @@
             android:ems="10"
             android:gravity="right"
             android:inputType="numberSigned"
-            android:text="1"
             android:selectAllOnFocus="true"
+            android:text="1"
             android:visibility="gone"
-            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Tok" />
+            app:layout_constraintTop_toBottomOf="@+id/Tok"
+            tools:visibility="visible" />
 
 
         <TextView
@@ -266,11 +271,11 @@
             android:text="@string/kl"
             android:textColor="@color/primaryTextColor"
             android:visibility="gone"
-            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.987"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:visibility="visible" />
 
         <Button
             android:id="@+id/calculate"
@@ -278,7 +283,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:onClick="onClick"
             android:text="@string/btntext1"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"

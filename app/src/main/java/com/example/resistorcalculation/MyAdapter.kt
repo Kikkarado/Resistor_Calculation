@@ -33,7 +33,7 @@ class MyAdapter(private val allhistory: ArrayList<AllHistory>) : RecyclerView.Ad
         holder.voltage.text = "%.3f".format(history.voltage)
         holder.f_voltage.text = "%.3f".format(history.f_voltage)
         holder.current.text = "%.3f".format(history.current)
-        holder.n_o_leds.text = "%.3f".format(history.n_o_leds)
+        holder.n_o_leds.text = history.n_o_leds.toString()
         holder.resistence.text = "%.3f".format(history.resistence)
         holder.min_power.text = "%.3f".format(history.min_power)
     }

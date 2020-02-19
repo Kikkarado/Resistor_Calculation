@@ -24,7 +24,7 @@ class DBHelper(
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("create table $TABLE_DATA($KEY_ID integer primary key, $VOLTAGE double, \" +\n" +
-                "                \"$F_VOLTAGE double, $CURRENT double, $N_O_LEDS double, $RESISTENCE double, $MIN_POWER double)")
+                "                \"$F_VOLTAGE double, $CURRENT double, $N_O_LEDS int, $RESISTENCE double, $MIN_POWER double)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -46,7 +46,7 @@ class DBHelper(
             his.voltage = cursor.getDouble(cursor.getColumnIndex(VOLTAGE))
             his.f_voltage = cursor.getDouble(cursor.getColumnIndex(F_VOLTAGE))
             his.current = cursor.getDouble(cursor.getColumnIndex(CURRENT))
-            his.n_o_leds = cursor.getDouble(cursor.getColumnIndex(N_O_LEDS))
+            his.n_o_leds = cursor.getInt(cursor.getColumnIndex(N_O_LEDS))
             his.resistence = cursor.getDouble(cursor.getColumnIndex(RESISTENCE))
             his.min_power = cursor.getDouble(cursor.getColumnIndex(MIN_POWER))
             allh.add(his)
